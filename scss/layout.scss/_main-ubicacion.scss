@@ -1,0 +1,72 @@
+#bodyubi{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 0.3fr 1fr 0.5fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "header header header"
+    "ubicacion ubicacion ubicacion"
+    "footer footer footer"
+    ;
+}
+
+#ubicacion{
+    background-color: white;
+    grid-area: ubicacion;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "navU ubi ubi"
+    "navU ubi ubi";
+    grid-column-gap: 5px;
+
+    #navU{
+        grid-area: navU;
+    }
+
+    #ubi{
+        background-color: $colorsecundario;
+        grid-area: ubi;
+
+        p{
+            color: white;
+            font-size: 1.3rem;
+            text-align:inherit;
+            margin-top: 120px;
+            margin-left: 60px;
+        }
+    }
+
+    @include media-up(sm){
+        #ubicacion{
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: repeat(2, 0.5fr);
+            grid-template-areas: 
+            "navU navU"
+            "ubi ubi";
+            .gps{
+                height: 500px;
+                width: 350px;
+            }
+            p{
+                color: white;
+                font-size: 1rem;
+                text-align:inherit;
+                margin-top: 60px;
+                margin-left: 30px;
+            }
+            }
+    }
+
+    @include media-up(md){
+        
+    }
+
+    @include media-up(lg){
+        
+    }
+
+
+}

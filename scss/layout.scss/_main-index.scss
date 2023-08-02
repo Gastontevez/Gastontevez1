@@ -1,0 +1,39 @@
+main{
+    background-color: $colorsecundario;
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 0.7fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "seccion1 seccion1 seccion1"
+    "seccion2 seccion2 seccion2"
+    ;
+    grid-row-gap: 5px;
+
+    #seccion1{
+        grid-area: seccion1;
+        background-color: $colorsecundario;
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+
+    #seccion2{
+        grid-area: seccion2;
+        background-color: white;
+        
+        #seccion22{
+            @include flexbox(row, nowrap, space-evenly, center);
+
+            .seccion22{
+                width: 18rem; margin-top: 5px; background-color: $colorprincipal; color: white;
+
+                img{
+                    height: 270px;
+                    width: 180px;
+                    border: 20px solid #E8CA4D;
+                }
+                    }
+        
+            }
+        }
+}

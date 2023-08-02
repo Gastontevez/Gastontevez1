@@ -1,0 +1,14 @@
+
+
+@import "./utilities/variables";
+// @import "../node_modules/bootstrap/scss/bootstrap";
+@import "./utilities/mixins";
+@import "./layout.scss/media-768";
+@import "./layout.scss/body";
+@import "./layout.scss/header";
+@import "./layout.scss/main-index";
+@import "./layout.scss/main-producto";
+@import "./layout.scss/main-ubicacion";
+@import "./layout.scss/main-atencion";
+@import "./layout.scss/main-acercade";
+@import "./layout.scss/footer";

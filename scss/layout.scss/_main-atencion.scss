@@ -1,0 +1,73 @@
+#bodyate{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 0.3fr 1fr 0.5fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "header header header"
+    "atencion atencion atencion"
+    "footer footer footer"
+    ;
+}
+
+
+#atencion{
+    background-color: $colorsecundario;
+    grid-area: atencion;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "ATE ATE1 ATE1"
+    "ATE ATE1 ATE1";
+
+    #ATE{
+        color: white;
+        list-style-type: none;
+        text-align: center;
+    }
+}
+
+#ATE1{
+    .ate label{
+        color: white;
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+
+    }
+    input{
+        padding: 5px 20px;
+    }
+
+    .ate1 label{
+        color: white;
+        display: block;
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .ate2{
+        color: white;
+        display: block;
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .enviartext{
+        background-color: #E8CA4D;
+        font-size: 1rem;
+        border: 2px solid black;
+        border-radius: 7px;
+
+    }
+
+    #mensaje{
+        padding: 100px;
+    }
+
+
+
+}

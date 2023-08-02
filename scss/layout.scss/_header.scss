@@ -1,0 +1,87 @@
+header{
+    background-color: $colorprincipal;
+    grid-area: header;
+    @include flexbox(row, nowrap, flex-start, start);
+
+    #logo{
+        background-color: $colorprincipal;
+        flex-grow: 1;
+
+        #navheader{
+            background-color: $colorprincipal;
+            flex-grow: 0;
+        }
+    }
+
+    #menu .envio{
+        @include flexbox(row, nowrap, space-evenly, start);
+
+        input{
+            @include contenedor(none, white, 2px, 4px 80px, 2px solid black, 5px);
+            
+            
+        }
+    }
+
+    label{
+        @include contenedor(none, #999999, 2px, 4px, 2px solid black, 5px);
+
+    }
+    .registrar{
+        background-color: #E8CA4D;;
+    }
+
+    .menudenav{
+        background-color: $colorprincipal;
+        color: white;
+        flex-grow: 1;
+    }
+
+    #menudenav1{
+        @include flexbox(row, nowrap, space-evenly, flex-start);
+        margin-top: 35px;
+
+        li{
+            list-style-type: none;
+            text-decoration: none;
+
+            a{
+                color: white;
+                list-style-type: none;
+                text-decoration: none;
+            }
+        }
+    
+    }
+
+    @include media-up(sm){
+        background-color: $colorprincipal;
+        grid-area: header;
+        @include flexbox(column, wrap, space-evenly, center);
+        
+        #menu .envio{
+            @include flexbox(row, wrap, space-evenly, start);
+    
+            input{
+                @include contenedor(none, white, 2px, 4px 40px, 2px solid black, 5px);
+                
+
+                label{
+                    @include contenedor(none, #999999, 2px, 3px, 2px solid black, 3px);
+            
+                }
+                
+            }
+        }
+    }
+
+    @include media-up(md){
+        background-color: $colorprincipal;
+    }
+
+    @include media-up(lg){
+        background-color: $colorprincipal;
+    grid-area: header;
+    @include flexbox(row, nowrap, flex-start, start);;
+    }
+}
