@@ -10,18 +10,21 @@ header{
         #navheader{
             background-color: $colorprincipal;
             flex-grow: 0;
+    
         }
     }
 
-    #menu .envio{
-        @include flexbox(row, nowrap, space-evenly, start);
+    #menu #envio{
+        @include flexbox(row, nowrap, space-around, start);
 
-        input{
-            @include contenedor(none, white, 2px, 4px 80px, 2px solid black, 5px);
+        .casilla{
+            @include contenedor(none, white, 2px, 4px 60px 4px 0px, 2px solid black, 5px);
             
             
         }
     }
+
+    
 
     label{
         @include contenedor(none, #999999, 2px, 4px, 2px solid black, 5px);
@@ -59,11 +62,11 @@ header{
         grid-area: header;
         @include flexbox(column, wrap, space-evenly, center);
         
-        #menu .envio{
+        #menu #envio{
             @include flexbox(row, wrap, space-evenly, start);
     
-            input{
-                @include contenedor(none, white, 2px, 4px 40px, 2px solid black, 5px);
+            .casilla{
+                @include contenedor(none, white, 2px, 3px 15px 3px 0px, 2px solid black, 5px);
                 
 
                 label{
@@ -77,11 +80,29 @@ header{
 
     @include media-up(md){
         background-color: $colorprincipal;
+        
     }
 
     @include media-up(lg){
         background-color: $colorprincipal;
     grid-area: header;
+    @include flexbox(column, wrap, flex-start, center);
+    #menu #envio{
+        @include flexbox(row, nowrap, space-around, start);
+
+        .casilla{
+            @include contenedor(none, white, 2px, 4px 60px 4px 0px, 2px solid black, 5px);
+            
+            
+        }
+    }
+    }
+
+
+    @include media-up(xl){
+        background-color: $colorprincipal;
+        grid-area: header;
     @include flexbox(row, nowrap, flex-start, start);;
     }
+    
 }

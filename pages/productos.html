@@ -29,17 +29,19 @@
             <nav id="navheader">
                     <section id="menu">
 
-                        <div class="envio">
-                            <input type="text" name="" id="ubicacion" placeholder="Ubicación">
-                            <label for="ubicacion" type="button" value="envio">Envío</label>
-                        
-                            <input type="text" name="" id="busqueda" placeholder="Busqueda">
-                            <label for="busqueda" type="button" value="buscar">Buscar</label>             
-                       
-                            <label class="registrar" for="regristarse" type="button" value="registrarse">Registrarse</label>
+                      <div id="envio">
+                        <input class="casilla" type="text" name="" id="ubicacion" placeholder="Ubicación">
+                        <label for="ubicacion" type="button" value="envio">Envío</label>
 
-                            <label class="registrar" for="compra" type="button" value="compra">Carrito</label>
-                        </div>
+                        <input class="casilla" type="text" name="" id="busqueda" placeholder="Busqueda">
+                        <label for="busqueda" type="button" value="buscar">Buscar</label>
+
+                        <label class="registrar" for="compra" type="button" value="compra">Carrito</label>
+
+                        <label class="registrar" for="regristarse" type="button" value="registrarse">Registrarse</label>
+
+                        <label class="registrar" for="compra" type="button" value="ingreso">Ingresar</label>
+                    </div>
 
                     </section>
                     
@@ -62,22 +64,28 @@
 
 <main id="mainproduc">
             <nav id="navP">
-                        <div>Productos</div>
-                        <ul>
-                            <li><a href="#">Cámaras</a></li>
-                            <li><a href="#">Lentes</a></li>
-                            <li><a href="#">Trípodes</a></li>
-                            <li><a href="#">Filtros</a></li>
-                            <li><a href="#">Accesorios</a></li>
-                        </ul>
+              <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Productos
+                </a>
+              
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Accesorios</a></li>
+                  <li><a class="dropdown-item" href="#">Cámaras</a></li>
+                  <li><a class="dropdown-item" href="#">Trípode</a></li>
+                  <li><a class="dropdown-item" href="#">Filtros</a></li>
+                  <li><a class="dropdown-item" href="#">Lentes</a></li>
+                </ul>
+              </div>
+                      
              </nav>
         
                         <section id="sectionnavP">
       
                             <div id="producto2">
                 
-                              <div class="card" style="width: 16rem; margin-top: 5px; margin-bottom: 5px; background-color: #22242B; color: white;">
-                                <img style="height: 240px; width: 250px;" src="../assets/img/mark ii.jpg" class="card-img-top" alt="...">
+                              <div class="card" style="width: 10rem; margin-top: 5px; margin-bottom: 5px; background-color: #22242B; color: white;">
+                                <img style="height: 140px; width: 150px;" src="../assets/img/mark ii.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <h5 class="card-title"></h5>
                                   <p class="card-text" style="font-size: 1rem;">Canon m50 mark ii</p>
@@ -85,8 +93,8 @@
                                 </div>
                               </div>
                 
-                              <div class="card" style="width: 16rem; margin-top: 5px; margin-bottom: 5px; background-color: #22242B; color: white;">
-                                  <img style="height: 240px; width: 250px;" src="../assets/img/Canon-EOS-R10-R5-2.webp" class="card-img-top" alt="...">
+                              <div class="card" style="width: 10rem; margin-top: 5px; margin-bottom: 5px; background-color: #22242B; color: white;">
+                                  <img style="height: 140px; width: 150px;" src="../assets/img/Canon-EOS-R10-R5-2.webp" class="card-img-top" alt="...">
                                   <div class="card-body">
                                     <h5 class="card-title"></h5>
                                     <p class="card-text" style="font-size: 1rem;">Canon eos R10</p>
@@ -94,8 +102,8 @@
                                   </div>
                               </div>
                         
-                                <div class="card" style="width: 16rem; margin-top: 5px; margin-bottom: 5px; background-color: #22242B; color: white;">
-                                  <img style="height: 240px; width: 250px;" src="../assets/img/sony-zv-e10-ts2.webp" class="card-img-top" alt="...">
+                                <div class="card" style="width: 10rem; margin-top: 5px; margin-bottom: 5px; background-color: #22242B; color: white;">
+                                  <img style="height: 140px; width: 150px;" src="../assets/img/sony-zv-e10-ts2.webp" class="card-img-top" alt="...">
                                   <div class="card-body">
                                     <h5 class="card-title"></h5>
                                     <p class="card-text" style="font-size: 1rem;">Sony zv e10</p>
@@ -103,8 +111,8 @@
                                   </div>
                                 </div> 
 
-                                <div class="card" style="width: 16rem; margin-top: 5px; margin-bottom: 5px; background-color: #22242B; color: white;">
-                                    <img style="height: 240px; width: 250px;" src="../assets/img/1366_2000.jpg" class="card-img-top" alt="...">
+                                <div class="card" style="width: 10rem; margin-top: 5px; margin-bottom: 5px; background-color: #22242B; color: white;">
+                                    <img style="height: 140px; width: 150px;" src="../assets/img/1366_2000.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
                                       <h5 class="card-title"></h5>
                                       <p class="card-text" style="font-size: 1rem;">Nikon z50</p>
@@ -118,7 +126,7 @@
             
         
         <section id="sectionnavP1">
-            <article class="producto">
+            <article id="producto">
                 <iframe
                 width="360" 
                 height="215" 
@@ -137,19 +145,33 @@
 <!-- INICIA EL FOOTER -->
 <footer>
   <div id="redsocial">
-    <div class="red">
-      <img src="../assets/redes-logo/wsp.png" alt="whatsapp">
-      <a href="">Whatsapp</a>
+    <div >
+      <a href="#">
+        <img src="../assets/redes-logo/whatsapp-icon-logo-svgrepo-com.svg" alt="whatsapp">
+      </a>
   </div>
-  <div class="red1">
-      <img src="../assets/redes-logo/insta.png" alt="instagram">
-      <a href="">Instagram</a>
+  <div >
+      <a href="#">
+        <img src="../assets/redes-logo/instagram-1-svgrepo-com.svg" alt="instagram">
+      </a>
   </div>
-  <div class="red2">
-      <img src="../assets/redes-logo/face.png" alt="facebook">
-      <a href="">Facebook</a>
+  <div >
+      <a href="#">
+        <img src="../assets/redes-logo/facebook-svgrepo-com.svg" alt="facebook">
+      </a>
   </div>
   </div>
+
+  <div id="terminos">
+    <ul id="terminos1">
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Cómo cuidamos tu privacidad</a></li>
+        <li><a href="#">Accesibilidad</a></li>
+        <li><a href="#">Ayuda</a></li>
+        <li><a href="#">Defensa del consumidor</a></li>
+        <li><a href="#">Información sobre seguros</a></li>
+    </ul>
+</div>
  <p class="inline">Todos los derechos reservados</p>
 </footer>
 

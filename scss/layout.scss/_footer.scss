@@ -6,40 +6,23 @@ footer{
         #redsocial{
             @include flexbox(row, nowrap, space-around, center);
 
-                    .red{
-                    @include contenedor-red(green, white, 5px solid green, 7px);
-
-                        a{
-                            text-decoration: none;
-                            color: white;
-                        }
-
-                    }
-                }
-
-        .red1{
-            @include contenedor-red(red, white, 5px solid red, 7px);
-
-                    a{
-                        text-decoration: none;
-                        color: white;
-                    }
-            }
-
-
-        .red2{
-            @include contenedor-red(#3a5795, white, 5px solid #3a5795, 7px);
-
-                    a{
-                        text-decoration: none;
-                        color: white;
-                    }
-            }
 
             img{
-                height: 30px;
-                width: 30px;
+                height: 35px;
+                width: 35px;
                 border-radius: 3px solid;
+                margin-top: 15px;
+            }
+            }
+
+            #terminos1{
+                @include flexbox(row, nowrap, space-around, center);
+                margin-top: 10px;
+            }
+            a{
+                color: white;
+                text-decoration: none;
+                list-style-type: none;
             }
 
         .inline{

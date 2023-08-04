@@ -1,7 +1,11 @@
+$card-border-width: 5px;
+$card-border-color: #E8CA4D;
+$dropdown-bg: white;
+
 
 
 @import "./utilities/variables";
-// @import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/bootstrap";
 @import "./utilities/mixins";
 @import "./layout.scss/media-768";
 @import "./layout.scss/body";

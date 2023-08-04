@@ -31,10 +31,9 @@
     border-radius: $borderrad;
 }
 
-@mixin contenedor-red ($bc, $color, $border, $b-radio) {
-    background-color: $bc;
-    color: $color;
+@mixin contenedor-red ($border, $b-radio) {
     border: $border;
     border-radius: $b-radio;
 
 }
+
