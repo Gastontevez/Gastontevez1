@@ -12017,6 +12017,9 @@ main #seccion1 {
   margin-top: 7px;
   margin-bottom: 7px;
 }
+main .card3 {
+  border: 3px solid #E8CA4D;
+}
 main #seccion2 {
   grid-area: seccion2;
   background-color: white;
@@ -12090,6 +12093,20 @@ main #seccion2 #seccion22 .seccion22 img {
   justify-content: space-around;
   align-items: stretch;
 }
+#mainproduc #producto2 .card1 {
+  width: 10rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #22242B;
+  color: white;
+  border: 4px solid #E8CA4D;
+  border-radius: 5px;
+}
+#mainproduc #producto2 .card2 {
+  background-color: #999999;
+  padding: 3px;
+  border-radius: 5px;
+}
 #mainproduc #sectionnavP1 {
   background-color: #22242B;
   grid-area: sectionnavP1;
@@ -12108,11 +12125,11 @@ main #seccion2 #seccion22 .seccion22 img {
 }
 
 #ubicacion {
-  background-color: white;
+  background-color: #2C2E35;
   grid-area: ubicacion;
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "navU ubi ubi" "navU ubi ubi";
   grid-column-gap: 5px;
 }
@@ -12120,35 +12137,65 @@ main #seccion2 #seccion22 .seccion22 img {
   grid-area: navU;
 }
 #ubicacion #ubi {
-  background-color: #2C2E35;
   grid-area: ubi;
 }
 #ubicacion #ubi p {
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-align: inherit;
-  margin-top: 120px;
-  margin-left: 60px;
+  transform: translate(0%, 250%);
 }
 @media screen and (min-width: 540px) {
   #ubicacion #ubicacion {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: repeat(2, 0.5fr);
-    grid-template-areas: "navU navU" "ubi ubi";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "navU ubi";
   }
-  #ubicacion #ubicacion .gps {
-    height: 500px;
-    width: 350px;
+  #ubicacion #navU {
+    grid-area: navU;
   }
-  #ubicacion #ubicacion p {
+  #ubicacion #navU iframe {
+    height: 250px;
+    width: 250px;
+  }
+  #ubicacion #ubi {
+    grid-area: ubi;
+  }
+  #ubicacion #ubi p {
     color: white;
     font-size: 1rem;
-    text-align: inherit;
-    margin-top: 60px;
-    margin-left: 30px;
+    text-align: start;
   }
 }
+@media screen and (min-width: 768px) {
+  #ubicacion #ubicacion {
+    background-color: #2C2E35;
+    grid-area: ubicacion;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "navU ubi ubi" "navU ubi ubi";
+    grid-column-gap: 5px;
+  }
+  #ubicacion #navU {
+    grid-area: navU;
+  }
+  #ubicacion #navU iframe {
+    height: 450px;
+    width: 350px;
+  }
+  #ubicacion #ubi {
+    grid-area: ubi;
+  }
+  #ubicacion #ubi p {
+    color: white;
+    font-size: 1.2rem;
+    text-align: inherit;
+    transform: translate(0%, 250%);
+  }
+}
+
 #bodyate {
   height: 100vh;
   display: grid;
@@ -12161,16 +12208,20 @@ main #seccion2 #seccion22 .seccion22 img {
   background-color: #2C2E35;
   grid-area: atencion;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "ATE ATE1 ATE1" "ATE ATE1 ATE1";
 }
 #atencion #ATE {
+  grid-area: ATE;
   color: white;
   list-style-type: none;
   text-align: center;
 }
 
+#ATE1 {
+  grid-area: ATE1;
+}
 #ATE1 .ate label {
   color: white;
   display: block;
@@ -12178,7 +12229,7 @@ main #seccion2 #seccion22 .seccion22 img {
   font-weight: bold;
 }
 #ATE1 input {
-  padding: 5px 20px;
+  padding: 0px 25px 5px 0px;
 }
 #ATE1 .ate1 label {
   color: white;
@@ -12193,6 +12244,10 @@ main #seccion2 #seccion22 .seccion22 img {
   margin-top: 10px;
   font-size: 18px;
   font-weight: bold;
+  margin-top: 10px;
+}
+#ATE1 .ate2 label {
+  margin-top: 10px;
 }
 #ATE1 .enviartext {
   background-color: #E8CA4D;
@@ -12201,7 +12256,8 @@ main #seccion2 #seccion22 .seccion22 img {
   border-radius: 7px;
 }
 #ATE1 #mensaje {
-  padding: 100px;
+  padding: 0px 60px 80px 0px;
+  margin-bottom: 5px;
 }
 
 #bodyfocus {

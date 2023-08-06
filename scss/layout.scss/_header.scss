@@ -85,9 +85,9 @@ header{
 
     @include media-up(lg){
         background-color: $colorprincipal;
-    grid-area: header;
-    @include flexbox(column, wrap, flex-start, center);
-    #menu #envio{
+        grid-area: header;
+        @include flexbox(column, wrap, flex-start, center);
+        #menu #envio{
         @include flexbox(row, nowrap, space-around, start);
 
         .casilla{

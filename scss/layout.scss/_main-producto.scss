@@ -58,6 +58,22 @@
 
     #producto2{
         @include flexbox(row, wrap, space-around, stretch);
+
+        .card1{
+            width: 10rem; 
+            margin-top: 5px; 
+            margin-bottom: 5px; 
+            background-color: #22242B; 
+            color: white;
+            border: 4px solid $colordefotos;
+            border-radius: 5px;
+        }
+        .card2{
+            background-color: #999999;
+            padding: 3px;
+            border-radius: 5px;
+        }
+        
     }
 
     #sectionnavP1{
