@@ -10,7 +10,6 @@ header{
         #navheader{
             background-color: $colorprincipal;
             flex-grow: 0;
-    
         }
     }
 
@@ -19,8 +18,7 @@ header{
 
         .casilla{
             @include contenedor(none, white, 2px, 4px 60px 4px 0px, 2px solid black, 5px);
-            
-            
+      
         }
     }
 
@@ -34,7 +32,7 @@ header{
         background-color: #E8CA4D;;
     }
 
-    .menudenav{
+    #menudenav{
         background-color: $colorprincipal;
         color: white;
         flex-grow: 1;
@@ -57,9 +55,38 @@ header{
     
     }
 
+
+
+    
+
+    @include media-up(xs){
+        header{
+            @include flexbox(column, wrap, space-around, center);
+            }
+            #menu {
+        
+            #envio{
+                @include flexbox(row, wrap, space-evenly, start);
+        
+                .casilla{
+                    @include contenedor(none, white, 1px, 2px 5px 2px 0px, 1px solid black, 3px);
+                    
+    
+                    label{
+                        @include contenedor(none, #999999, 1px, 2px, 1px solid black, 2px);
+                
+                    }
+                    
+                }
+            }
+        }   
+    }
+
+
+
+
+
     @include media-up(sm){
-        background-color: $colorprincipal;
-        grid-area: header;
         @include flexbox(column, wrap, space-evenly, center);
         
         #menu #envio{
@@ -78,10 +105,9 @@ header{
         }
     }
 
-    @include media-up(md){
-        background-color: $colorprincipal;
-        
-    }
+
+
+
 
     @include media-up(lg){
         background-color: $colorprincipal;
@@ -102,7 +128,7 @@ header{
     @include media-up(xl){
         background-color: $colorprincipal;
         grid-area: header;
-    @include flexbox(row, nowrap, flex-start, start);;
-    }
+        @include flexbox(row, nowrap, flex-start, start);;
+        }
     
 }

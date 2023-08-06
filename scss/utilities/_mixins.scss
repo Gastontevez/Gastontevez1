@@ -9,10 +9,6 @@
     text-align: center;
 }
 
-// @mixin grid($rows, $columns, $areas) {
-//     display: grid;
-//     grid-template-rows: ;
-// }
 
 @mixin flexbox ($direction, $wrap, $justify, $align) {
     display: flex;
