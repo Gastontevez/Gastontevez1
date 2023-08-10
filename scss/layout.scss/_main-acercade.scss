@@ -14,20 +14,18 @@
 #mainfocus{
     grid-area: mainfocus;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     grid-template-areas: 
-    "focus focus focus"
-    "focus focus focus"
-    "focus3 focus3 focus3";
-    grid-column-gap: 5px;
+    "focus"
+    "focus4"
+    "focus3";
     
     #focus{
         grid-area: focus;
-        
         .focus{
         width: 100%;
-        height: 80vh;
+        height: 85%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -43,6 +41,7 @@
             position: absolute;
             color: white;
             text-align: center;
+            font-size: 1.2rem;
             border-radius: 10px;
             transform: translate(0%, 100%);
             background: linear-gradient($colorprincipal, $colorsecundario);
@@ -51,39 +50,180 @@
         }
     }
 
-
+    #focus4{
+        grid-area: focus4;
+        .text{
+            color: white;
+            text-align: center;
+        }
+        .img{
+            height: 700px;
+            width: 800px;
+        }
+    }
         #focus3{
-            margin-top: 30px;
+        grid-area: focus3;
         }
     
 
 
 
-    @include media-up(sm){
-        grid-template-rows: 1fr 1fr;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 
-    "focus focus"
-    "focus1 focus1";
-    grid-column-gap: 5px;
-
-    #focus{
-        grid-area: focus;
-        
-    }
-
-    #focus1{
-        grid-area: focus1;
-
-        p{
-            color: white;
-            font-size: 1rem;
-            text-align: start;
-            margin: 5px;
-            margin-top: 20px;
+     @include media-up(sm){
+        #mainfocus{
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "focus"
+            "focus4"
+            "focus3";
+            grid-row-gap: 5px;
         }
-    }
+
+        #focus4{
+            grid-area: focus4;
+            background-position: center;
+            text-align: center;
+
+            .text{
+                color: white;
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+            .img{
+                view-timeline-name: --image;
+                view-timenline-axis: block;
+
+                animation-timeline: --image;
+                animation-name: show;
+                animation-range: entry 25% cover 50%;
+                animation-fill-mode: both;
+
+                text-align: center;
+                height: 400px;
+                width: 500px;
+            }
+        }
+            #focus3{
+            grid-area: focus3;
+            margin-top: 20px;
+            text-align: center;
+            .producto iframe{
+                height: 350px;
+                width: 450px;
+            }
+            }
+
+            @keyframes show {
+                from{
+                    opacity: 0;
+                    scale: 25%;
+                to{
+                    opacity: 1;
+                    scale: 100%;
+                }    
+                }
+                
+            }
     }
 
+    @include media-up(md){
+        #focus4{
+            grid-area: focus4;
+            background-position: center;
+            text-align: center;
 
+            .text{
+                color: white;
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+            .img{
+                view-timeline-name: --image;
+                view-timenline-axis: block;
+
+                animation-timeline: --image;
+                animation-name: show;
+                animation-range: entry 25% cover 50%;
+                animation-fill-mode: both;
+
+                text-align: center;
+                height: 500px;
+                width: 600px;
+            }
+        }
+            #focus3{
+            grid-area: focus3;
+            margin-top: 20px;
+            text-align: center;
+            .producto iframe{
+                height: 400px;
+                width: 500px;
+            }
+
+            }
+            @keyframes show {
+                from{
+                    opacity: 0;
+                    scale: 25%;
+                to{
+                    opacity: 1;
+                    scale: 100%;
+                }    
+                }
+                
+            }
+    }
+
+    @include media-up(lg){
+        
+        #focus4{
+            grid-area: focus4;
+            background-position: center;
+            text-align: center;
+
+            .text{
+                color: white;
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+            .img{
+                view-timeline-name: --image;
+                view-timenline-axis: block;
+
+                animation-timeline: --image;
+                animation-name: show;
+                animation-range: entry 25% cover 50%;
+                animation-fill-mode: both;
+
+                text-align: center;
+                height: 600px;
+                width: 700px;
+            }
+        }
+            #focus3{
+            grid-area: focus3;
+            margin-top: 20px;
+            text-align: center;
+            .producto iframe{
+                height: 550px;
+                width: 700px;
+            }
+            }
+
+            @keyframes show {
+                from{
+                    opacity: 0;
+                    scale: 25%;
+                to{
+                    opacity: 1;
+                    scale: 100%;
+                }    
+                }
+                
+            }
+    }
 }
