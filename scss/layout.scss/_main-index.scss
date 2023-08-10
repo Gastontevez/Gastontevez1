@@ -16,10 +16,6 @@ main{
         margin-top: 7px;
         margin-bottom: 7px;
     }
-    
-    .card3{
-        border: 3px solid #E8CA4D;
-    }
 
     #seccion2{
         grid-area: seccion2;
@@ -28,16 +24,9 @@ main{
         #seccion22{
             @include flexbox(row, nowrap, space-evenly, center);
 
-            .seccion22{
-                width: 18rem; margin-top: 5px; background-color: $colorprincipal; color: white;
-
-                img{
-                    height: 270px;
-                    width: 180px;
-                    border: 20px solid #E8CA4D;
-                }
-                    }
         
-            }
         }
+    }
+
+
 }

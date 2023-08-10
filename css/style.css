@@ -11925,38 +11925,6 @@ header #menudenav1 li a {
   list-style-type: none;
   text-decoration: none;
 }
-@media screen and (min-width: 320px) {
-  header header {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-  }
-  header #menu #envio {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: start;
-  }
-  header #menu #envio .casilla {
-    list-style-type: none;
-    background-color: white;
-    margin: 1px;
-    padding: 2px 5px 2px 0px;
-    border: 1px solid black;
-    border-radius: 3px;
-  }
-  header #menu #envio .casilla label {
-    list-style-type: none;
-    background-color: #999999;
-    margin: 1px;
-    padding: 2px;
-    border: 1px solid black;
-    border-radius: 2px;
-  }
-}
 @media screen and (min-width: 540px) {
   header {
     display: flex;
@@ -12042,9 +12010,6 @@ main #seccion1 {
   margin-top: 7px;
   margin-bottom: 7px;
 }
-main .card3 {
-  border: 3px solid #E8CA4D;
-}
 main #seccion2 {
   grid-area: seccion2;
   background-color: white;
@@ -12055,17 +12020,6 @@ main #seccion2 #seccion22 {
   flex-wrap: nowrap;
   justify-content: space-evenly;
   align-items: center;
-}
-main #seccion2 #seccion22 .seccion22 {
-  width: 18rem;
-  margin-top: 5px;
-  background-color: #22242B;
-  color: white;
-}
-main #seccion2 #seccion22 .seccion22 img {
-  height: 270px;
-  width: 180px;
-  border: 20px solid #E8CA4D;
 }
 
 #body {
@@ -12082,7 +12036,7 @@ main #seccion2 #seccion22 .seccion22 img {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "navP sectionnavP sectionnavP" "navP sectionnavP sectionnavP" "sectionnavP1 sectionnavP1 sectionnavP1";
+  grid-template-areas: "navP sectionnavP1 sectionnavP1" "sectionnavP sectionnavP sectionnavP" "sectionnavP sectionnavP sectionnavP";
   grid-column-gap: 5px;
 }
 #mainproduc #navP {
@@ -12127,6 +12081,10 @@ main #seccion2 #seccion22 .seccion22 img {
   border: 4px solid #E8CA4D;
   border-radius: 5px;
 }
+#mainproduc #producto2 .card4 {
+  height: 140px;
+  width: 150px;
+}
 #mainproduc #producto2 .card2 {
   background-color: #999999;
   padding: 3px;
@@ -12139,6 +12097,49 @@ main #seccion2 #seccion22 .seccion22 img {
 }
 #mainproduc #producto {
   margin-top: 40px;
+}
+#mainproduc #producto .video {
+  height: 300px;
+  width: 500px;
+}
+@media screen and (min-width: 540px) {
+  #mainproduc #producto2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+  #mainproduc #producto2 .card1 {
+    width: 10rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #22242B;
+    color: white;
+    border: 4px solid #E8CA4D;
+    border-radius: 5px;
+  }
+  #mainproduc #producto2 .card4 {
+    height: 140px;
+    width: 150px;
+  }
+  #mainproduc #producto2 .card2 {
+    background-color: #999999;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  #mainproduc #sectionnavP1 {
+    background-color: #22242B;
+    grid-area: sectionnavP1;
+    text-align: center;
+  }
+  #mainproduc #producto {
+    margin-top: 40px;
+  }
+  #mainproduc #producto .video {
+    height: 200px;
+    width: 300px;
+  }
 }
 
 #bodyubi {
@@ -12173,9 +12174,9 @@ main #seccion2 #seccion22 .seccion22 img {
 @media screen and (min-width: 540px) {
   #ubicacion #ubicacion {
     display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "navU ubi";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "navU ubi ubi" "navU ubi ubi";
   }
   #ubicacion #navU {
     grid-area: navU;
@@ -12191,6 +12192,7 @@ main #seccion2 #seccion22 .seccion22 img {
     color: white;
     font-size: 1rem;
     text-align: start;
+    transform: translate(0%, 0%);
   }
 }
 @media screen and (min-width: 768px) {
@@ -12217,7 +12219,7 @@ main #seccion2 #seccion22 .seccion22 img {
     color: white;
     font-size: 1.2rem;
     text-align: inherit;
-    transform: translate(0%, 250%);
+    transform: translate(0%, 0%);
   }
 }
 
@@ -12386,27 +12388,6 @@ footer .inline {
   text-align: center;
   color: white;
   margin: 20px 0px;
-}
-@media screen and (min-width: 320px) {
-  footer {
-    background-color: #22242B;
-    grid-area: footer;
-  }
-  footer #redsocial {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  footer #terminos1 {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 10px;
-  }
 }
 @media screen and (min-width: 540px) {
   footer {

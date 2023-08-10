@@ -18,9 +18,9 @@
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
-    "navP sectionnavP sectionnavP"
-    "navP sectionnavP sectionnavP"
-    "sectionnavP1 sectionnavP1 sectionnavP1";    
+    "navP sectionnavP1 sectionnavP1"
+    "sectionnavP sectionnavP sectionnavP"
+    "sectionnavP sectionnavP sectionnavP";    
     grid-column-gap: 5px;
 
     #navP{
@@ -68,6 +68,11 @@
             border: 4px solid $colordefotos;
             border-radius: 5px;
         }
+
+        .card4{
+            height: 140px;
+            width: 150px;
+        }
         .card2{
             background-color: #999999;
             padding: 3px;
@@ -83,6 +88,54 @@
     }
     #producto{
         margin-top: 40px;
+
+        .video{
+            height: 300px;
+            width: 500px;
+        }
     }
 
+
+
+    @include media-up(sm){
+        #producto2{
+            @include flexbox(row, wrap, space-around, stretch);
+    
+            .card1{
+                width: 10rem; 
+                margin-top: 5px; 
+                margin-bottom: 5px; 
+                background-color: #22242B; 
+                color: white;
+                border: 4px solid $colordefotos;
+                border-radius: 5px;
+            }
+    
+            .card4{
+                height: 140px;
+                width: 150px;
+            }
+            .card2{
+                background-color: #999999;
+                padding: 3px;
+                border-radius: 5px;
+            }
+            
+        }
+    
+        #sectionnavP1{
+            background-color: $colorprincipal;
+            grid-area: sectionnavP1;
+            text-align: center;
+        }
+        #producto{
+            margin-top: 40px;
+    
+            .video{
+                height: 200px;
+                width: 300px;
+            }
+        }
+
+    }
 }

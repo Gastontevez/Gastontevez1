@@ -40,10 +40,11 @@
     @include media-up(sm){
         #ubicacion{
             display: grid;
-            grid-template-rows: 1fr;
-            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             grid-template-areas: 
-            "navU ubi"
+            "navU ubi ubi"
+            "navU ubi ubi"
             ;
             }
             
@@ -63,6 +64,7 @@
                     color: white;
                     font-size: 1rem;
                     text-align: start;
+                    transform: translate(0%, 0%);
                 }
 
                 }
@@ -97,7 +99,7 @@
                     color: white;
                     font-size: 1.2rem;
                     text-align: inherit;
-                    transform: translate(0%, 250%);
+                    transform: translate(0%, 0%);
                 }
                 }
     }

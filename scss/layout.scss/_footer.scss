@@ -31,20 +31,6 @@ footer{
             margin: 20px 0px;
             }
 
-
-            @include media-up(xs){
-                background-color: $colorprincipal;
-                grid-area: footer;
-                #redsocial{
-                    @include flexbox(row, nowrap, space-evenly, center);
-                }
-
-                #terminos1{
-                @include flexbox(column, nowrap, space-around, center);
-                margin-top: 10px;
-                }
-            }
-
             @include media-up(sm){
                 background-color: $colorprincipal;
                 grid-area: footer;
