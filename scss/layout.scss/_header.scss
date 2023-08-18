@@ -56,6 +56,33 @@ header{
     }
 
 
+    @include media-up(s){
+        @include flexbox(column, wrap, space-evenly, center);
+        
+        #menu #envio{
+            @include flexbox(row, wrap, space-evenly, center);
+    
+            .casilla{
+                @include contenedor(none, white, 1px, 1.5px 4px 1.5px 0px, 1px solid black, 5px);
+                
+
+                label{
+                    @include contenedor(none, #999999, 1px, 1.5px, 1px solid black, 1.5px);
+            
+                }
+                
+            }
+        }
+
+        #menudenav1{
+            @include flexbox(column, nowrap, space-evenly, center);
+            margin-top: 35px;
+    
+            
+        
+        }
+    
+    }
 
 
     @include media-up(sm){
@@ -74,6 +101,23 @@ header{
                 }
                 
             }
+        }
+
+        #menudenav1{
+            @include flexbox(row, nowrap, space-evenly, flex-start);
+            margin-top: 35px;
+    
+            li{
+                list-style-type: none;
+                text-decoration: none;
+    
+                a{
+                    color: white;
+                    list-style-type: none;
+                    text-decoration: none;
+                }
+            }
+        
         }
     }
 

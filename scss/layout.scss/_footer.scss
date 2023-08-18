@@ -1,6 +1,7 @@
 footer{
     grid-area: footer;
     background-color: $colorprincipal;
+    height: 100%;
 
 
         #redsocial{
@@ -43,4 +44,24 @@ footer{
                 margin-top: 10px;
                 }
             }
+
+            @include media-up(s){
+                footer{
+                    height: 100%;
+                }
+
+                #terminos1{
+                    @include flexbox(column, wrap, space-around, stretch);
+                    margin-top: 10px;
+                }
+            
+            
+            }
+
+                @include media-up(sm){
+                    #terminos1{
+                        @include flexbox(row, wrap, space-around, center);
+                        margin-top: 10px;
+                    }
+                }
 }

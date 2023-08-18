@@ -8,7 +8,7 @@ main{
     "seccion1 seccion1 seccion1"
     "seccion2 seccion2 seccion2"
     ;
-    grid-row-gap: 5px;
+    grid-row-gap: 5px;}
 
     #seccion1{
         grid-area: seccion1;
@@ -23,10 +23,67 @@ main{
         
         #seccion22{
             @include flexbox(row, nowrap, space-evenly, center);
-
-        
         }
     }
 
 
-}
+    @include media-up(s){
+        main{
+            background-color: $colorsecundario;
+            grid-area: main;
+            display: grid;
+            grid-template-rows: 0.3fr 1fr;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "seccion1"
+            "seccion2"
+            ;
+            grid-row-gap: 5px;}
+
+            #seccion1{
+                grid-area: seccion1;
+                background-color: $colorsecundario;
+                margin-top: 30px;
+            }
+
+        #seccion2{
+            grid-area: seccion2;
+            background-color: white;
+            margin-top: 30px;
+            
+            
+            #seccion22{
+                @include flexbox(column, wrap, space-around, center);
+            }
+        }
+    }
+
+
+    @include media-up(sm){
+        main{
+            background-color: $colorsecundario;
+            grid-area: main;
+            display: grid;
+            grid-template-rows: 0.7fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: 
+            "seccion1 seccion1 seccion1"
+            "seccion2 seccion2 seccion2"
+            ;
+            grid-row-gap: 5px;}
+
+        #seccion1{
+            grid-area: seccion1;
+            background-color: $colorsecundario;
+            margin-top: 30px;
+            }
+     
+            #seccion2{
+                grid-area: seccion2;
+                background-color: white;
+                
+                #seccion22{
+                    @include flexbox(row, nowrap, space-evenly, center);
+                }
+            }
+        }
