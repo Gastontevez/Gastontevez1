@@ -35,6 +35,30 @@
       }
     }
 
+    #ubi2{
+        p{
+            color: white;
+            font-size: 1.2rem;
+            text-align: inherit;
+        }
+    }
+
+    #ubi3{
+        p{
+            color: white;
+            font-size: 1.2rem;
+            text-align: inherit;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        img{
+            height: 35px;
+            width: 35px;
+        }
+    }
+
     @include media-up(s){
         #ubicacion{
             display: grid;
@@ -50,8 +74,9 @@
                 grid-area: navU;
             
                 iframe{
-                    height: 150px;
-                    width: 150px;
+                    height: 200px;
+                    width: 230px;
+                    border-radius: 10px;
                 }
             }
             #ubi{
@@ -59,11 +84,45 @@
             
                 p{
                     color: white;
-                    font-size: 0.8rem;
+                    font-size: 1rem;
                     text-align: justify;
                     transform: translate(0%, 0%);
                 }
+
+                .mockup{
+                    height: 200px;
+                    width: 230px;
+                    border: 1px solid $colordefotos;
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                }
             }
+
+            #ubi2{
+                p{
+                    color: white;
+                    font-size: 1rem;
+                    text-align: inherit;
+                }
+            }
+        
+            #ubi3{
+                transform: translate(0%, 0%);
+                p{
+                    color: white;
+                    font-size: 1rem;
+                    text-align: inherit;
+                }
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+                img{
+                    height: 35px;
+                    width: 35px;
+                }
+            }
+        
         }
 
     @include media-up(sm){
@@ -92,7 +151,39 @@
                     text-align: start;
                     transform: translate(0%, 0%);
                 }
+                .mockup{
+                    height: 220px;
+                    width: 270px;
+                    border-radius: 10px;
+                }
             }
+
+            #ubi2{
+                p{
+                    color: white;
+                    font-size: 1.2rem;
+                    text-align: inherit;
+                }
+            }
+        
+            #ubi3{
+                transform: translate(10%, 0%);
+                p{
+                    color: white;
+                    font-size: 1.2rem;
+                    text-align: inherit;
+                }
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+                img{
+                    height: 35px;
+                    width: 35px;
+                    margin-bottom: 10px;
+                }
+            }
+        
     }
 
     @include media-up(md){
@@ -111,8 +202,8 @@
                 grid-area: navU;
         
                 iframe{
-                    height: 450px;
-                    width: 350px;
+                    height: 400px;
+                    width: 450px;
                 }
             }
         
@@ -126,4 +217,86 @@
                     transform: translate(0%, 0%);
                 }
             }
+
+            #ubi2{
+                p{
+                    color: white;
+                    font-size: 1.2rem;
+                    text-align: inherit;
+                }
+            }
+        
+            #ubi3{
+                p{
+                    color: white;
+                    font-size: 1.2rem;
+                    text-align: inherit;
+                }
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+                img{
+                    height: 35px;
+                    width: 35px;
+                }
+            }
+        
+    }
+
+    @include media-up(l){
+        #ubi{
+            grid-area: ubi;
+            
+            p{
+                color: white;
+                font-size: 1rem;
+                text-align: start;
+                transform: translate(0%, 0%);
+            }
+            .mockup{
+                height: 350px;
+                width: 450px;
+                border-radius: 10px;
+                transform: translate(10%, -5%);
+            }
+        }
+    }
+
+    @include media-up(xl){
+        #ubi{
+            grid-area: ubi;
+            
+            p{
+                color: white;
+                font-size: 1rem;
+                text-align: start;
+                transform: translate(0%, 0%);
+            }
+            .mockup{
+                height: 360px;
+                width: 470px;
+                border-radius: 10px;
+                transform: translate(45%, -5%);
+            }
+        }
+    }
+
+    @include media-up(xxl){
+        #ubi{
+            grid-area: ubi;
+            
+            p{
+                color: white;
+                font-size: 1rem;
+                text-align: start;
+                transform: translate(0%, 0%);
+            }
+            .mockup{
+                height: 400px;
+                width: 520px;
+                border-radius: 10px;
+                transform: translate(45%, -5%);
+            }
+        }
     }

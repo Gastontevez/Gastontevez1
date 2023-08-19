@@ -60,28 +60,31 @@ header{
         @include flexbox(column, wrap, space-evenly, center);
         
         #menu #envio{
-            @include flexbox(row, wrap, space-evenly, center);
+            @include flexbox(row, wrap, space-between, center);
     
             .casilla{
                 @include contenedor(none, white, 1px, 1.5px 4px 1.5px 0px, 1px solid black, 5px);
+                margin-right: 25px;
                 
 
                 label{
                     @include contenedor(none, #999999, 1px, 1.5px, 1px solid black, 1.5px);
-            
+
+                    .registrar{
+                        background-color: #E8CA4D;
+                        margin-left: 10px;
+                    }            
                 }
                 
             }
         }
 
         #menudenav1{
-            @include flexbox(column, nowrap, space-evenly, center);
-            margin-top: 35px;
-    
-            
-        
+            @include flexbox(row, wrap, space-between, center);
+            margin-left: 7px;
+            margin-right: 40px;
+            margin-top: 35px;        
         }
-    
     }
 
 

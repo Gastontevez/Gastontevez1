@@ -11938,7 +11938,7 @@ header #menudenav1 li a {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
   }
   header #menu #envio .casilla {
@@ -11948,6 +11948,7 @@ header #menudenav1 li a {
     padding: 1.5px 4px 1.5px 0px;
     border: 1px solid black;
     border-radius: 5px;
+    margin-right: 25px;
   }
   header #menu #envio .casilla label {
     list-style-type: none;
@@ -11957,12 +11958,18 @@ header #menudenav1 li a {
     border: 1px solid black;
     border-radius: 1.5px;
   }
+  header #menu #envio .casilla label .registrar {
+    background-color: #E8CA4D;
+    margin-left: 10px;
+  }
   header #menudenav1 {
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
+    margin-left: 7px;
+    margin-right: 40px;
     margin-top: 35px;
   }
 }
@@ -12187,14 +12194,21 @@ main {
   grid-area: sectionnavP;
 }
 #mainproduc #producto2 {
+  grid-area: producto2;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: stretch;
 }
+#mainproduc #producto2 p {
+  flex-grow: 1;
+  width: 10.5rem;
+  text-align: justify;
+  display: block;
+}
 #mainproduc #producto2 .card1 {
-  width: 10rem;
+  width: 12rem;
   margin-top: 5px;
   margin-bottom: 5px;
   background-color: #22242B;
@@ -12203,11 +12217,15 @@ main {
   border-radius: 5px;
 }
 #mainproduc #producto2 .card4 {
-  height: 140px;
-  width: 150px;
+  flex-grow: 1;
+  height: 165px;
+  width: 182px;
+  border-radius: 7px solid;
 }
 #mainproduc #producto2 .card2 {
-  background-color: #999999;
+  flex-grow: 1;
+  background-color: #E8CA4D;
+  text-align: center;
   padding: 3px;
   border-radius: 5px;
 }
@@ -12228,7 +12246,7 @@ main {
   #mainproduc {
     height: 100%;
     display: grid;
-    grid-template-rows: 0.4fr 0.6fr 1fr;
+    grid-template-rows: 0.2fr 0.2fr 2.8fr;
     grid-template-columns: 1fr;
     grid-template-areas: "navP" "sectionnavP1" "sectionnavP";
     grid-row-gap: 5px;
@@ -12241,6 +12259,7 @@ main {
   #sectionnavP {
     background-color: #2C2E35;
     grid-area: sectionnavP;
+    height: 100%;
   }
   #sectionnavP .card1 {
     width: 10rem;
@@ -12271,6 +12290,7 @@ main {
   #sectionnavP1 #producto .video {
     height: 180px;
     width: 300px;
+    margin-right: 10px;
   }
 }
 @media screen and (min-width: 540px) {
@@ -12278,7 +12298,7 @@ main {
     background-color: white;
     grid-area: mainproduc;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 0.6fr 0.6fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "navP sectionnavP1 sectionnavP1" "sectionnavP sectionnavP sectionnavP" "sectionnavP sectionnavP sectionnavP";
     grid-column-gap: 5px;
@@ -12352,6 +12372,26 @@ main {
   transform: translate(0%, 250%);
 }
 
+#ubi2 p {
+  color: white;
+  font-size: 1.2rem;
+  text-align: inherit;
+}
+
+#ubi3 p {
+  color: white;
+  font-size: 1.2rem;
+  text-align: inherit;
+}
+#ubi3 a {
+  text-decoration: none;
+  color: white;
+}
+#ubi3 img {
+  height: 35px;
+  width: 35px;
+}
+
 @media screen and (min-width: 320px) {
   #ubicacion {
     display: grid;
@@ -12363,17 +12403,46 @@ main {
     grid-area: navU;
   }
   #navU iframe {
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 230px;
+    border-radius: 10px;
   }
   #ubi {
     grid-area: ubi;
   }
   #ubi p {
     color: white;
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-align: justify;
     transform: translate(0%, 0%);
+  }
+  #ubi .mockup {
+    height: 200px;
+    width: 230px;
+    border: 1px solid #E8CA4D;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  #ubi2 p {
+    color: white;
+    font-size: 1rem;
+    text-align: inherit;
+  }
+  #ubi3 {
+    transform: translate(0%, 0%);
+  }
+  #ubi3 p {
+    color: white;
+    font-size: 1rem;
+    text-align: inherit;
+  }
+  #ubi3 a {
+    text-decoration: none;
+    color: white;
+  }
+  #ubi3 img {
+    height: 35px;
+    width: 35px;
   }
 }
 @media screen and (min-width: 540px) {
@@ -12399,6 +12468,33 @@ main {
     text-align: start;
     transform: translate(0%, 0%);
   }
+  #ubi .mockup {
+    height: 220px;
+    width: 270px;
+    border-radius: 10px;
+  }
+  #ubi2 p {
+    color: white;
+    font-size: 1.2rem;
+    text-align: inherit;
+  }
+  #ubi3 {
+    transform: translate(10%, 0%);
+  }
+  #ubi3 p {
+    color: white;
+    font-size: 1.2rem;
+    text-align: inherit;
+  }
+  #ubi3 a {
+    text-decoration: none;
+    color: white;
+  }
+  #ubi3 img {
+    height: 35px;
+    width: 35px;
+    margin-bottom: 10px;
+  }
 }
 @media screen and (min-width: 768px) {
   #ubicacion {
@@ -12414,8 +12510,8 @@ main {
     grid-area: navU;
   }
   #navU iframe {
-    height: 450px;
-    width: 350px;
+    height: 400px;
+    width: 450px;
   }
   #ubi {
     grid-area: ubi;
@@ -12425,6 +12521,75 @@ main {
     font-size: 1.2rem;
     text-align: inherit;
     transform: translate(0%, 0%);
+  }
+  #ubi2 p {
+    color: white;
+    font-size: 1.2rem;
+    text-align: inherit;
+  }
+  #ubi3 p {
+    color: white;
+    font-size: 1.2rem;
+    text-align: inherit;
+  }
+  #ubi3 a {
+    text-decoration: none;
+    color: white;
+  }
+  #ubi3 img {
+    height: 35px;
+    width: 35px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #ubi {
+    grid-area: ubi;
+  }
+  #ubi p {
+    color: white;
+    font-size: 1rem;
+    text-align: start;
+    transform: translate(0%, 0%);
+  }
+  #ubi .mockup {
+    height: 350px;
+    width: 450px;
+    border-radius: 10px;
+    transform: translate(10%, -5%);
+  }
+}
+@media screen and (min-width: 1200px) {
+  #ubi {
+    grid-area: ubi;
+  }
+  #ubi p {
+    color: white;
+    font-size: 1rem;
+    text-align: start;
+    transform: translate(0%, 0%);
+  }
+  #ubi .mockup {
+    height: 360px;
+    width: 470px;
+    border-radius: 10px;
+    transform: translate(45%, -5%);
+  }
+}
+@media screen and (min-width: 1400px) {
+  #ubi {
+    grid-area: ubi;
+  }
+  #ubi p {
+    color: white;
+    font-size: 1rem;
+    text-align: start;
+    transform: translate(0%, 0%);
+  }
+  #ubi .mockup {
+    height: 400px;
+    width: 520px;
+    border-radius: 10px;
+    transform: translate(45%, -5%);
   }
 }
 #bodyate {
@@ -12454,23 +12619,27 @@ main {
 #ATE1 {
   grid-area: ATE1;
 }
-#ATE1 .ate label {
+
+.ate label {
   color: white;
   display: block;
   font-size: 18px;
   font-weight: bold;
 }
-#ATE1 input {
+
+input {
   padding: 0px 25px 5px 0px;
 }
-#ATE1 .ate1 label {
+
+.ate1 label {
   color: white;
   display: block;
   margin-top: 10px;
   font-size: 18px;
   font-weight: bold;
 }
-#ATE1 .ate2 {
+
+.ate2 {
   color: white;
   display: block;
   margin-top: 10px;
@@ -12478,16 +12647,18 @@ main {
   font-weight: bold;
   margin-top: 10px;
 }
-#ATE1 .ate2 label {
+.ate2 label {
   margin-top: 10px;
 }
-#ATE1 .enviartext {
+
+.enviartext {
   background-color: #E8CA4D;
   font-size: 1rem;
   border: 2px solid black;
   border-radius: 7px;
 }
-#ATE1 #mensaje {
+
+#mensaje {
   padding: 0px 60px 80px 0px;
   margin-bottom: 5px;
 }
@@ -12502,6 +12673,25 @@ main {
   width: 700px;
 }
 
+@media screen and (min-width: 320px) {
+  #atencion {
+    display: grid;
+    grid-template-rows: 0.1fr 1fr 0.5fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "ATE" "ATE1" "ATE2";
+  }
+  #ATE1 {
+    grid-area: ATE1;
+    text-align: center;
+  }
+  #ATE2 {
+    text-align: center;
+  }
+  #ATE2 .ate3 {
+    height: 200px;
+    width: 300px;
+  }
+}
 @media screen and (min-width: 540px) {
   #atencion {
     display: grid;
@@ -12511,8 +12701,9 @@ main {
   }
   #ATE2 {
     text-align: center;
+    margin-top: 10px;
   }
-  .ate3 {
+  #ATE2 .ate3 {
     height: 350px;
     width: 500px;
   }
@@ -12527,7 +12718,7 @@ main {
   #ATE2 {
     text-align: right;
   }
-  .ate3 {
+  #ATE2 .ate3 {
     height: 500px;
     width: 575px;
   }
@@ -12547,10 +12738,11 @@ main {
   grid-template-columns: 1fr;
   grid-template-areas: "focus" "focus4" "focus3";
 }
-#mainfocus #focus {
+
+#focus {
   grid-area: focus;
 }
-#mainfocus #focus .focus {
+#focus .focus {
   width: 100%;
   height: 85%;
   display: flex;
@@ -12562,7 +12754,7 @@ main {
   background-position: center;
   background-attachment: fixed;
 }
-#mainfocus #focus .focus .texto {
+#focus .focus .texto {
   width: 80%;
   padding: 20px;
   position: absolute;
@@ -12574,40 +12766,147 @@ main {
   background: linear-gradient(#22242B, #2C2E35);
   opacity: 0.7;
 }
-#mainfocus #focus4 {
+
+#focus4 {
   grid-area: focus4;
 }
-#mainfocus #focus4 .text {
+#focus4 .text {
   color: white;
   text-align: center;
 }
-#mainfocus #focus4 .img {
+#focus4 .img {
   height: 700px;
   width: 800px;
 }
-#mainfocus #focus3 {
+
+#focus3 {
   grid-area: focus3;
 }
-@media screen and (min-width: 540px) {
-  #mainfocus #mainfocus {
+
+@media screen and (min-width: 320px) {
+  #mainfocus {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 0.7fr 1fr 0.3fr;
     grid-template-columns: 1fr;
     grid-template-areas: "focus" "focus4" "focus3";
     grid-row-gap: 5px;
   }
-  #mainfocus #focus4 {
+  #focus {
+    grid-area: focus;
+  }
+  #focus .focus {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../assets/productos/paisaje.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  #focus .focus .texto {
+    width: 80%;
+    padding: 20px;
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 10px;
+    transform: translate(0%, 47%);
+    background: linear-gradient(#22242B, #2C2E35);
+    opacity: 0.7;
+  }
+  #focus4 {
     grid-area: focus4;
     background-position: center;
     text-align: center;
   }
-  #mainfocus #focus4 .text {
+  #focus4 .text {
     color: white;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 20px;
   }
-  #mainfocus #focus4 .img {
+  #focus4 .img {
+    view-timeline-name: --image;
+    view-timenline-axis: block;
+    animation-timeline: --image;
+    animation-name: show;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+    text-align: center;
+    height: 200px;
+    width: 275px;
+  }
+  #focus3 {
+    grid-area: focus3;
+    margin-top: 20px;
+    text-align: center;
+  }
+  #focus3 .producto iframe {
+    height: 200px;
+    width: 300px;
+  }
+  @keyframes show {
+    from {
+      opacity: 0;
+      scale: 25%;
+      to {
+        opacity: 1;
+        scale: 100%;
+      }
+    }
+  }
+}
+@media screen and (min-width: 540px) {
+  #mainfocus {
+    display: grid;
+    grid-template-rows: 0.8fr 1f 0.5fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "focus" "focus4" "focus3";
+    grid-row-gap: 5px;
+  }
+  #focus {
+    grid-area: focus;
+  }
+  #focus .focus {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../assets/productos/paisaje.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  #focus .focus .texto {
+    width: 80%;
+    padding: 20px;
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    transform: translate(0%, 100%);
+    background: linear-gradient(#22242B, #2C2E35);
+    opacity: 0.7;
+  }
+  #focus4 {
+    grid-area: focus4;
+    background-position: center;
+    text-align: center;
+  }
+  #focus4 .text {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  #focus4 .img {
     view-timeline-name: --image;
     view-timenline-axis: block;
     animation-timeline: --image;
@@ -12618,12 +12917,12 @@ main {
     height: 400px;
     width: 500px;
   }
-  #mainfocus #focus3 {
+  #focus3 {
     grid-area: focus3;
     margin-top: 20px;
     text-align: center;
   }
-  #mainfocus #focus3 .producto iframe {
+  #focus3 .producto iframe {
     height: 350px;
     width: 450px;
   }
@@ -12639,18 +12938,46 @@ main {
   }
 }
 @media screen and (min-width: 768px) {
-  #mainfocus #focus4 {
+  #focus {
+    grid-area: focus;
+  }
+  #focus .focus {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../assets/productos/paisaje.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  #focus .focus .texto {
+    width: 80%;
+    padding: 20px;
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    transform: translate(0%, 87%);
+    background: linear-gradient(#22242B, #2C2E35);
+    opacity: 0.7;
+  }
+  #focus4 {
     grid-area: focus4;
     background-position: center;
     text-align: center;
   }
-  #mainfocus #focus4 .text {
+  #focus4 .text {
     color: white;
+    font-size: 1.2rem;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 20px;
   }
-  #mainfocus #focus4 .img {
+  #focus4 .img {
     view-timeline-name: --image;
     view-timenline-axis: block;
     animation-timeline: --image;
@@ -12658,15 +12985,15 @@ main {
     animation-range: entry 25% cover 50%;
     animation-fill-mode: both;
     text-align: center;
-    height: 500px;
-    width: 600px;
+    height: 550px;
+    width: 650px;
   }
-  #mainfocus #focus3 {
+  #focus3 {
     grid-area: focus3;
     margin-top: 20px;
     text-align: center;
   }
-  #mainfocus #focus3 .producto iframe {
+  #focus3 .producto iframe {
     height: 400px;
     width: 500px;
   }
@@ -12682,18 +13009,45 @@ main {
   }
 }
 @media screen and (min-width: 1024px) {
-  #mainfocus #focus4 {
+  #focus {
+    grid-area: focus;
+  }
+  #focus .focus {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../assets/productos/paisaje.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  #focus .focus .texto {
+    width: 80%;
+    padding: 20px;
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    transform: translate(0%, 90%);
+    background: linear-gradient(#22242B, #2C2E35);
+    opacity: 0.7;
+  }
+  #focus4 {
     grid-area: focus4;
     background-position: center;
     text-align: center;
   }
-  #mainfocus #focus4 .text {
+  #focus4 .text {
     color: white;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 20px;
   }
-  #mainfocus #focus4 .img {
+  #focus4 .img {
     view-timeline-name: --image;
     view-timenline-axis: block;
     animation-timeline: --image;
@@ -12704,12 +13058,12 @@ main {
     height: 600px;
     width: 700px;
   }
-  #mainfocus #focus3 {
+  #focus3 {
     grid-area: focus3;
     margin-top: 20px;
     text-align: center;
   }
-  #mainfocus #focus3 .producto iframe {
+  #focus3 .producto iframe {
     height: 550px;
     width: 700px;
   }
@@ -12724,7 +13078,6 @@ main {
     }
   }
 }
-
 footer {
   grid-area: footer;
   background-color: #22242B;

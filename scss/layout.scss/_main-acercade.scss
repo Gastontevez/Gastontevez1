@@ -19,7 +19,7 @@
     grid-template-areas: 
     "focus"
     "focus4"
-    "focus3";
+    "focus3";}
     
     #focus{
         grid-area: focus;
@@ -66,12 +66,104 @@
         }
     
 
+        @include media-up(s){
+            #mainfocus{
+                display: grid;
+                grid-template-rows: 0.7fr 1fr 0.3fr;
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                "focus"
+                "focus4"
+                "focus3";
+                grid-row-gap: 5px;
+                    }
+
+            #focus{
+                grid-area: focus;
+                .focus{
+                    width: 100%;
+                    height: 85%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: url(../assets/productos/paisaje.webp);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    background-attachment: fixed;
+
+                .texto{
+                    width: 80%;
+                    padding: 20px;
+                    position: absolute;
+                    color: white;
+                    text-align: center;
+                    font-size: 1rem;
+                    border-radius: 10px;
+                    transform: translate(0%, 47%);
+                    background: linear-gradient($colorprincipal, $colorsecundario);
+                    opacity: 0.7;
+                      }
+                    }
+                }
+    
+            #focus4{
+                grid-area: focus4;
+                background-position: center;
+                text-align: center;
+    
+                .text{
+                    color: white;
+                    text-align: center;
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                }
+                .img{
+                    view-timeline-name: --image;
+                    view-timenline-axis: block;
+    
+                    animation-timeline: --image;
+                    animation-name: show;
+                    animation-range: entry 25% cover 50%;
+                    animation-fill-mode: both;
+    
+                    text-align: center;
+                    height: 200px;
+                    width: 275px;
+                }
+            }
+
+                #focus3{
+                grid-area: focus3;
+                margin-top: 20px;
+                text-align: center;
+                .producto iframe{
+                    height: 200px;
+                    width: 300px;
+                        }
+                }
+    
+    
+                @keyframes show {
+                    from{
+                        opacity: 0;
+                        scale: 25%;
+                    to{
+                        opacity: 1;
+                        scale: 100%;
+                        }    
+                    }
+                    
+                }
+            }
+    
+
 
 
      @include media-up(sm){
         #mainfocus{
             display: grid;
-            grid-template-rows: repeat(3, 1fr);
+            grid-template-rows: 0.8fr 1f 0.5fr;
             grid-template-columns: 1fr;
             grid-template-areas: 
             "focus"
@@ -79,6 +171,35 @@
             "focus3";
             grid-row-gap: 5px;
         }
+
+        #focus{
+            grid-area: focus;
+            .focus{
+                width: 100%;
+                height: 85%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: url(../assets/productos/paisaje.webp);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+
+            .texto{
+                width: 80%;
+                padding: 20px;
+                position: absolute;
+                color: white;
+                text-align: center;
+                font-size: 1.1rem;
+                border-radius: 10px;
+                transform: translate(0%, 100%);
+                background: linear-gradient($colorprincipal, $colorsecundario);
+                opacity: 0.7;
+                  }
+                }
+            }
 
         #focus4{
             grid-area: focus4;
@@ -112,8 +233,9 @@
             .producto iframe{
                 height: 350px;
                 width: 450px;
+                    }
             }
-            }
+
 
             @keyframes show {
                 from{
@@ -122,13 +244,42 @@
                 to{
                     opacity: 1;
                     scale: 100%;
-                }    
-                }
-                
+                    }    
+                }  
             }
     }
 
     @include media-up(md){
+
+        #focus{
+            grid-area: focus;
+            .focus{
+                width: 100%;
+                height: 85%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: url(../assets/productos/paisaje.webp);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+
+            .texto{
+                width: 80%;
+                padding: 20px;
+                position: absolute;
+                color: white;
+                text-align: center;
+                font-size: 1.5rem;
+                border-radius: 10px;
+                transform: translate(0%, 87%);
+                background: linear-gradient($colorprincipal, $colorsecundario);
+                opacity: 0.7;
+                  }
+                }
+            }
+
         #focus4{
             grid-area: focus4;
             background-position: center;
@@ -136,6 +287,7 @@
 
             .text{
                 color: white;
+                font-size: 1.2rem;
                 text-align: center;
                 margin-top: 10px;
                 margin-bottom: 20px;
@@ -150,8 +302,8 @@
                 animation-fill-mode: both;
 
                 text-align: center;
-                height: 500px;
-                width: 600px;
+                height: 550px;
+                width: 650px;
             }
         }
             #focus3{
@@ -161,9 +313,9 @@
             .producto iframe{
                 height: 400px;
                 width: 500px;
+                    }
             }
 
-            }
             @keyframes show {
                 from{
                     opacity: 0;
@@ -171,13 +323,41 @@
                 to{
                     opacity: 1;
                     scale: 100%;
-                }    
-                }
-                
-            }
+                    }    
+                }      
+         }
     }
 
     @include media-up(lg){
+        #focus{
+            grid-area: focus;
+            .focus{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: url(../assets/productos/paisaje.webp);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+
+            .texto{
+                width: 80%;
+                padding: 20px;
+                position: absolute;
+                color: white;
+                text-align: center;
+                font-size: 1.5rem;
+                border-radius: 10px;
+                transform: translate(0%, 90%);
+                background: linear-gradient($colorprincipal, $colorsecundario);
+                opacity: 0.7;
+                  }
+                }
+            }
+
         
         #focus4{
             grid-area: focus4;
@@ -211,7 +391,7 @@
             .producto iframe{
                 height: 550px;
                 width: 700px;
-            }
+                    }
             }
 
             @keyframes show {
@@ -221,9 +401,8 @@
                 to{
                     opacity: 1;
                     scale: 100%;
-                }    
+                    }    
                 }
                 
             }
     }
-}

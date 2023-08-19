@@ -31,7 +31,7 @@
 
 
     #ATE1{
-    grid-area: ATE1;
+    grid-area: ATE1;}
     
     .ate label{
         color: white;
@@ -78,8 +78,6 @@
         margin-bottom: 5px;
     }
 
-    
-}
 
 #ATE2{
     grid-area: ATE2;
@@ -88,6 +86,32 @@
 .ate3{
     height: 550px;
     width: 700px;
+}
+
+
+@include media-up(s){
+    #atencion{
+        display: grid;
+        grid-template-rows: 0.1fr 1fr 0.5fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "ATE"
+        "ATE1"
+        "ATE2";
+    }
+
+    #ATE1{
+        grid-area: ATE1;
+        text-align: center;}
+
+    #ATE2{
+        text-align: center;
+    
+    .ate3{
+        height: 200px;
+        width: 300px;
+        }    
+      }
 }
 
 
@@ -102,12 +126,15 @@
     }
     #ATE2{
         text-align: center;
-    }
+        margin-top: 10px;
+    
     .ate3{
         height: 350px;
         width: 500px;
-    }    
+        }    
+      }
     }
+
 
     @include media-up(l){
         #atencion{
@@ -120,10 +147,10 @@
         }
         #ATE2{
             text-align: right;
-        }
+        
         .ate3{
             height: 500px;
             width: 575px;
         }    
-}
-  
+    }
+  }

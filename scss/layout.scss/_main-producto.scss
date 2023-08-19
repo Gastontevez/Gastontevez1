@@ -38,10 +38,12 @@
         list-style-type: none;
     }
 
+
     p{
         font-size: 1rem;
         text-align: center;
         margin-top: 30px;
+        
     }
 
     li{
@@ -64,10 +66,17 @@
     }
 
     #producto2{
-        @include flexbox(row, wrap, space-around, stretch);
+        grid-area: producto2;
+        @include flexbox(row, wrap, space-between, stretch);
+        p{
+            flex-grow: 1;
+            width: 10.5rem;
+            text-align: justify;
+            display: block;
+        }
 
         .card1{
-            width: 10rem; 
+            width: 12rem; 
             margin-top: 5px; 
             margin-bottom: 5px; 
             background-color: #22242B; 
@@ -78,12 +87,17 @@
         }
 
         .card4{
-            height: 140px;
-            width: 150px;
+            flex-grow: 1;
+            height: 165px;
+            width: 182px;
+            border-radius: 7px solid;
             
         }
+
         .card2{
-            background-color: #999999;
+            flex-grow: 1;
+            background-color: $colordefotos;
+            text-align: center;
             padding: 3px;
             border-radius: 5px;
         }
@@ -102,14 +116,14 @@
             width: 500px;
         }
     }
-
 }
+
 
     @include media-up(s){
         #mainproduc{
             height: 100%;
             display: grid;
-            grid-template-rows: 0.4fr 0.6fr 1fr;
+            grid-template-rows: 0.2fr 0.2fr 2.8fr;
             grid-template-columns: 1fr;
             grid-template-areas: 
             "navP"
@@ -127,6 +141,7 @@
             #sectionnavP{
                 background-color: $colorsecundario;
                 grid-area: sectionnavP;
+                height: 100%;
                 .card1{
                     width: 10rem; 
                     margin-top: 5px; 
@@ -159,6 +174,7 @@
             .video{
                 height: 180px;
                 width: 300px;
+                margin-right: 10px;
             }
         }
       }
@@ -174,7 +190,7 @@
             background-color: white;
             grid-area: mainproduc;
             display: grid;
-            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-rows: 0.6fr 0.6fr 1fr;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-areas: 
             "navP sectionnavP1 sectionnavP1"
