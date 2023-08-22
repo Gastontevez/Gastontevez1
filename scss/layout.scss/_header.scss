@@ -29,7 +29,10 @@ header{
 
     }
     .registrar{
-        background-color: #E8CA4D;;
+        @include contenedor(none, #E8CA4D, 2px, 4px, 2px solid black, 5px);
+        text-decoration: none;
+        color: black;
+
     }
 
     #menudenav{

@@ -11902,7 +11902,14 @@ header label {
   border-radius: 5px;
 }
 header .registrar {
+  list-style-type: none;
   background-color: #E8CA4D;
+  margin: 2px;
+  padding: 4px;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
 }
 header #menudenav {
   background-color: #22242B;
